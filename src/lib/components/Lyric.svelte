@@ -37,7 +37,7 @@
 </script>
 
 {#if lyric.word === "NEWLINE"}
-	<br />
+	<div class="break"></div>
 {:else}
 	<div class={lyricClass}>
 		{lyric.word}
@@ -48,7 +48,7 @@
 	.lyric {
 		display: inline-block;
 		font-weight: 500;
-		padding: 10px 3.5px;
+		padding: 0px 3.5px;
 		letter-spacing: 0.05em;
 		font-size: 20px;
 		color: rgb(40, 40, 40);
@@ -62,5 +62,8 @@
 		color: white;
 		font-weight: 600;
 		transition: 0.3s;
+	}
+	.break {
+		margin: 15px 0px 0px 0px;
 	}
 </style>

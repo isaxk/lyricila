@@ -48,8 +48,15 @@
 				autofocus
 			/>
 		{/if}
+	{:else}
+		<input
+			class="lyricinput {inputClass}"
+			bind:value={typedLyrics}
+			type="text"
+			readonly
+		/>
 	{/if}
-	<br />
+	<div class="break"></div>
 	<div class="extended-lyrics">
 		{#key extendedActive}
 			{#each lyricData.extendedLyrics as lyric, i}
@@ -62,23 +69,30 @@
 <style>
 	.lyrics {
 		padding: 50px 0px;
+		line-height: 30px;
 	}
 
 	.lyricinput {
 		font-family: "Red Hat Display", sans-serif;
 		letter-spacing: 0.05em;
 		font-weight: 500;
-		display: inline-block;
+		display: inline-flex;
+		align-content: center;
 		border: none;
 		background-color: transparent;
-		padding: 10px 5px 0px 0px;
+		padding: 5px 5px 0px 4px;
 		/* 		border-bottom: 2px solid grey; */
 		width: 300px;
 		color: white;
 		outline: none;
+		margin-bottom: 10px;
 		font-size: 20px;
+		margin: 0px;
 	}
 	.submitted {
 		border: none;
+	}
+	.break {
+		margin: 15px 0px 0px 0px;
 	}
 </style>

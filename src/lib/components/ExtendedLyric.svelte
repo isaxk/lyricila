@@ -50,7 +50,7 @@
 	.lyric {
 		display: inline-block;
 		font-weight: 500;
-		padding: 10px 3.5px;
+		padding: 0px 3.5px;
 		letter-spacing: 0.05em;
 		font-size: 20px;
 		color: rgb(40, 40, 40);
