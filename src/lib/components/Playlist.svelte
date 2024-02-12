@@ -17,7 +17,7 @@
 		<div class="name">{playlist.name}</div>
 	</div>
 	<div class="options">
-		<a href="/play" class="play">
+		<a href="/play/{i}" class="play">
 			<span class="material-symbols-rounded"> play_arrow </span>
         </a>
 	</div>
