@@ -26,13 +26,23 @@
 <style>
 	.playlist {
 		display: grid;
-		grid-template-columns: max-content 60px 1fr max-content;
+		grid-template-columns: 30px max-content 1fr max-content;
 		height: 60px;
 		padding: 10px 20px;
 		align-items: center;
 		gap: 20px;
 		background-color: #272727;
 		border-radius: 5px;
+		margin: 10px 0px;
+	}
+	.id {
+		text-align: center;
+	}
+	.image-container {
+		width: 50px;
+		height: 50px;
+		display: grid;
+		place-items: center;
 	}
 	.image-container img {
 		width: 100%;

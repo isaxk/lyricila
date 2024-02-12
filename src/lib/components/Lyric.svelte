@@ -28,11 +28,12 @@
 	}
 
 	if (browser) {
+
 		window.setTimeout(() => {
 			lyricClass = "lyric focus";
 			window.setTimeout(()=>{
 				lyricClass = "lyric timed";
-			}, lyrics[currentLyricId].beforeLyrics[i].time)
+			}, 350)
 		}, timeoutLength);
 	}
 </script>

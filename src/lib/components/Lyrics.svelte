@@ -36,6 +36,7 @@
 		{#if inputClass === "submitted"}
 			<input
 				class="lyricinput submitted"
+				style="width: {lyricData.afterLyrics.length}ch;"
 				readonly
 				bind:value={typedLyrics}
 				type="text"
@@ -43,6 +44,7 @@
 		{:else}
 			<input
 				class="lyricinput {inputClass}"
+				style="width: {lyricData.afterLyrics.length}ch;"
 				bind:value={typedLyrics}
 				type="text"
 				autofocus
@@ -52,6 +54,7 @@
 		<input
 			class="lyricinput {inputClass}"
 			bind:value={typedLyrics}
+			style="width: {lyricData.afterLyrics.length}ch;"
 			type="text"
 			readonly
 		/>
@@ -82,7 +85,6 @@
 		background-color: transparent;
 		padding: 5px 5px 0px 4px;
 		/* 		border-bottom: 2px solid grey; */
-		width: 300px;
 		max-width: 100%;
 		color: white;
 		outline: none;
