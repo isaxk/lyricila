@@ -1,0 +1,21 @@
+.lyric {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0px 3.5px;
+    letter-spacing: 0.05em;
+    font-size: 20px;
+    color: rgb(40, 40, 40);
+}
+.lyric.timed {
+    color: rgb(204, 204, 204);
+    transition-delay: 0s;
+    transition: 0.1s;
+}
+.lyric.focus {
+    color: white;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.break {
+    margin: 15px 0px 0px 0px;
+}

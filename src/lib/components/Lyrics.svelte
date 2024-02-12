@@ -83,6 +83,7 @@
 		padding: 5px 5px 0px 4px;
 		/* 		border-bottom: 2px solid grey; */
 		width: 300px;
+		max-width: 100%;
 		color: white;
 		outline: none;
 		margin-bottom: 10px;
@@ -91,6 +92,7 @@
 	}
 	.submitted {
 		border: none;
+		color: rgb(46, 173, 46);
 	}
 	.break {
 		margin: 15px 0px 0px 0px;

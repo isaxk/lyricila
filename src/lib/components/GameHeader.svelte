@@ -1,12 +1,13 @@
 <script lang="ts">
     export let playlistData:{id:number,name:string,image:string,lyrics:Array<number>};
     export let lyricData:{ songName: string, albumCover: string, artist: string};
+    export let lyricId:number;
 </script>
 
 <div class="header">
 	<div class="info">
 		<div class="playlist">Playlist: {playlistData.name}</div>
-		<div class="counter">Lyric: 0/{playlistData.lyrics.length}</div>
+		<div class="counter">Lyric: {lyricId+1}/{playlistData.lyrics.length}</div>
 	</div>
     <div class="currentsonginfo">
         <div class="albumcover">

@@ -5,6 +5,7 @@
 	import GameHeader from "$lib/components/GameHeader.svelte";
 	import Lyrics from "$lib/components/Lyrics.svelte";
 	import { browser } from "$app/environment";
+	import { onDestroy } from "svelte";
 
 	const playlistId = 0;
 
@@ -20,11 +21,11 @@
 
 	let enteredLyrics: string = "";
 
-	let lyricData:any;
+	let lyricData: any;
 
 	function nextLyric() {
-		beforeFinished=false;
-		enteredLyrics="";
+		beforeFinished = false;
+		enteredLyrics = "";
 		lyricId++;
 	}
 
@@ -48,22 +49,28 @@
 		if (enteredLyrics !== "") {
 			sound = new Howl({
 				src: [lyricData.afterMp3path],
-				onend: ()=>nextLyric()
+				onend: () => {
+					window.setTimeout(nextLyric, 300);
+				},
 			});
 			sound.play();
 		}
 	}
+
+	onDestroy(() => {
+		Howler.stop();
+	});
 </script>
 
 {#key lyricId}
-<GameHeader {playlistData} {lyricData} />
+	<GameHeader {playlistData} {lyricData} {lyricId} />
 
-<div class="game-body">
-	<Lyrics
-		{lyricData}
-		currentLyricId={lyricId}
-		bind:enteredLyrics
-		{beforeFinished}
-	/>
-</div>
+	<div class="game-body">
+		<Lyrics
+			{lyricData}
+			currentLyricId={lyricId}
+			bind:enteredLyrics
+			{beforeFinished}
+		/>
+	</div>
 {/key}

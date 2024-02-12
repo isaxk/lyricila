@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { browser } from "$app/environment";
 	import { lyrics } from "$lib/lyrics";
+	import "$lib/css/lyricstyles.css";
 
 	export let lyric: { word: string; time: number };
 	export let i: number;
@@ -23,7 +24,7 @@
 	}
 
 	if (i === 0) {
-		timeoutLength = 0;
+		timeoutLength = lyric.time;;
 	} else {
 		timeoutLength = addPreviousLyricTimes();
 	}
@@ -46,23 +47,3 @@
 	</div>
 {/if}
 
-<style>
-	.lyric {
-		display: inline-block;
-		font-weight: 500;
-		padding: 0px 3.5px;
-		letter-spacing: 0.05em;
-		font-size: 20px;
-		color: rgb(40, 40, 40);
-	}
-	.lyric.timed {
-		color: rgb(204, 204, 204);
-		transition: 0.3s;
-		transition-delay: 0.1s;
-	}
-	.lyric.focus {
-		color: white;
-		font-weight: 600;
-		transition: 0.3s;
-	}
-</style>

@@ -31,7 +31,7 @@
 		padding: 10px 20px;
 		align-items: center;
 		gap: 20px;
-		background-color: rgb(33, 33, 33);
+		background-color: #272727;
 		border-radius: 5px;
 	}
 	.image-container img {

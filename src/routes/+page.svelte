@@ -7,11 +7,6 @@
 	<title>Lyricila</title>
 </svelte:head>
 
-<div class="header">
-	<h1>Lyricila</h1>
-	<h3>The minimal finish the lyric game</h3>
-</div>
-
 <div class="playlist-selection">
 	<h2>Choose playlist:</h2>
 	{#each playlists as playlist, i}
@@ -23,5 +18,9 @@
 	.header {
 		border-bottom: 2px solid grey;
 		padding: 20px 0px;
+	}
+	.playlist-selection {
+		width: 100%;
+		max-width: 600px;
 	}
 </style>
